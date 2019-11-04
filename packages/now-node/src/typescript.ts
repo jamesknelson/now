@@ -191,10 +191,11 @@ export function register(opts: Options = {}): Register {
       return;
     }
     const error = createTSError(diagnostics);
-    // Print error in red color and continue execution.
-    console.error('\x1b[31m%s\x1b[0m', error);
     if (shouldExit) {
-      process.exit(1);
+      throw error;
+    } else {
+      // Print error in red color and continue execution.
+      console.error('\x1b[31m%s\x1b[0m', error);
     }
   }
 

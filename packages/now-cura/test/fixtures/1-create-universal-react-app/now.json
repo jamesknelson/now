@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "now-cura",
+      "config": { "zeroConfig": true }
+    }
+  ],
+  "probes": [
+    { "path": "/", "mustContain": "save to reload" },
+    { "path": "/testing-output-dir.txt", "mustContain": "This is some content" }
+  ]
+}

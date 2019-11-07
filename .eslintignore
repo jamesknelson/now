@@ -18,6 +18,9 @@ packages/now-cli/src/util/dev/templates/*.ts
 packages/now-client/tests/fixtures
 packages/now-client/lib
 
+# now-cura
+packages/now-cura/test/fixtures
+
 # now-next
 packages/now-next/test/fixtures
 
